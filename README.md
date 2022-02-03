@@ -907,3 +907,11 @@ E:\workspace\django-2022\TENANTCY\2022-django-tenant-guide\2022-django-tenant-gu
 ```
 
 
+#### 23. Darurat - Delete db, migrations files and recreate db
+
+```py
+
+        modified:   shop/migrations/0001_initial.py
+        modified:   sweet_shared/migrations/0001_initial.py
+        modified:   sweet_tenant/migrations/0001_initial.py
+```

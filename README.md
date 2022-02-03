@@ -29,4 +29,33 @@ E:\workspace\django-2022\TENANTCY\2022-django-tenant-guide\2022-django-tenant-gu
 ```
 
 
+#### 2. Create virtual environment
+
+
+```bash
+# Create virtual environment
+E:\workspace\django-2022\TENANTCY\2022-django-tenant-guide\2022-django-tenant-guide (main)
+λ python -m venv venv3940 --promp django-tenant
+
+# Virtual environtment's structure
+.
+├── LICENSE
+├── README.md
+└── venv3940
+    ├── Include
+    ├── Lib
+    │  └── site-packages
+    ├── Scripts
+    │  ├── Activate.ps1
+    │  ├── activate
+    │  ├── activate.bat
+    │  ├── deactivate.bat
+    │  ├── pip.exe
+    │  ├── pip3.9.exe
+    │  ├── pip3.exe
+    │  ├── python.exe
+    │  └── pythonw.exe
+    └── pyvenv.cfg
+```
+
 

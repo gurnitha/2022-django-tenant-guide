@@ -332,3 +332,23 @@ CREATE DATABASE
 postgres=# \c django_tenant_guide_2022;
 You are now connected to database "django_tenant_guide_2022" as user "postgres".
 ```
+
+
+#### 10. Connecting the project with the postgres database
+
+
+```py
+
+# POSTGRES DATABASE
+DATABASES = {
+    'default': {
+        'ENGINE': 'django_tenants.postgresql_backend',
+        'NAME': 'django_tenant_guide_2022',
+        'USERNAME': 'postgres',
+        'PASSWORD': 'ing',
+        'HOST': 'localhost',
+        'PORT': '5432'
+    }
+}
+
+```

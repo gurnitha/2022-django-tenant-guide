@@ -76,10 +76,22 @@ WSGI_APPLICATION = 'sweetshop.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django_tenants.postgresql_backend',
+        'NAME': 'django_tenant_guide_2022',
+        'USERNAME': 'postgres',
+        'PASSWORD': 'ing',
+        'HOST': 'localhost',
+        'PORT': '5432'
     }
 }
 

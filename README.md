@@ -271,3 +271,40 @@ http://127.0.0.1:8000/
 ```
 
 
+#### 8. Installing django_tenants
+
+
+```bash
+
+# Install django_tenants
+E:\workspace\django-2022\TENANTCY\2022-django-tenant-guide\2022-django-tenant-guide\sweetshop (main)
+(django-tenant) λ pip install django_tenants
+Collecting django_tenants
+  Using cached django-tenants-3.4.2.tar.gz (107 kB)
+  Preparing metadata (setup.py) ... done
+Requirement already satisfied: Django<=4.1,>=2.1 in e:\workspace\django-2022\tenantcy\2022-django-tenant-guide\2022-django-tenant-guide\venv3940\lib\site-packages (from django_tenants) (4.0)
+Requirement already satisfied: tzdata in e:\workspace\django-2022\tenantcy\2022-django-tenant-guide\2022-django-tenant-guide\venv3940\lib\site-packages (from Django<=4.1,>=2.1->django_tenants) (2021.5)
+Requirement already satisfied: sqlparse>=0.2.2 in e:\workspace\django-2022\tenantcy\2022-django-tenant-guide\2022-django-tenant-guide\venv3940\lib\site-packages (from Django<=4.1,>=2.1->django_tenants) (0.4.2)
+Requirement already satisfied: asgiref<4,>=3.4.1 in e:\workspace\django-2022\tenantcy\2022-django-tenant-guide\2022-django-tenant-guide\venv3940\lib\site-packages (from Django<=4.1,>=2.1->django_tenants) (3.5.0)
+Using legacy 'setup.py install' for django_tenants, since package 'wheel' is not installed.
+Installing collected packages: django_tenants
+  Running setup.py install for django_tenants ... done
+Successfully installed django_tenants-3.4.2
+
+# Check the result
+
+E:\workspace\django-2022\TENANTCY\2022-django-tenant-guide\2022-django-tenant-guide\sweetshop (main)
+(django-tenant) λ pip freeze
+asgiref==3.5.0
+Django==4.0
+django-tenants==3.4.2
+sqlparse==0.4.2
+tzdata==2021.5
+
+# Create requirements.txt file
+
+E:\workspace\django-2022\TENANTCY\2022-django-tenant-guide\2022-django-tenant-guide\sweetshop (main)
+(django-tenant) λ pip freeze r> requirements.txt
+```
+
+

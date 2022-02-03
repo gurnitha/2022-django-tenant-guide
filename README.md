@@ -164,4 +164,61 @@ E:\workspace\django-2022\TENANTCY\2022-django-tenant-guide\2022-django-tenant-gu
 ```
 
 
+#### 5. Creating django app 'shop'
+
+
+```bash
+
+# Creating django app 'shop'
+
+E:\workspace\django-2022\TENANTCY\2022-django-tenant-guide\2022-django-tenant-guide (main)
+(django-tenant) λ ls
+LICENSE  README.md  sweetshop  venv3940
+
+E:\workspace\django-2022\TENANTCY\2022-django-tenant-guide\2022-django-tenant-guide (main)
+(django-tenant) λ cd sweetshop\
+
+E:\workspace\django-2022\TENANTCY\2022-django-tenant-guide\2022-django-tenant-guide\sweetshop (main)
+(django-tenant) λ django-admin startapp shop
+
+# Project's structure
+.
+├── LICENSE
+├── README.md
+├── sweetshop
+│   ├── manage.py
+│   ├── shop
+│   │   ├── __init__.py
+│   │   ├── admin.py
+│   │   ├── apps.py
+│   │   ├── migrations
+│   │   ├── models.py
+│   │   ├── tests.py
+│   │   └── views.py
+│   └── sweetshop
+│       ├── __init__.py
+│       ├── asgi.py
+│       ├── settings.py
+│       ├── urls.py
+│       └── wsgi.py
+└── venv3940
+    ├── Include
+    ├── Lib
+    │   └── site-packages
+    ├── Scripts
+    │   ├── Activate.ps1
+    │   ├── activate
+    │   ├── activate.bat
+    │   ├── deactivate.bat
+    │   ├── django-admin.exe
+    │   ├── pip.exe
+    │   ├── pip3.9.exe
+    │   ├── pip3.exe
+    │   ├── python.exe
+    │   ├── pythonw.exe
+    │   └── sqlformat.exe
+    └── pyvenv.cfg
+
+```
+
 

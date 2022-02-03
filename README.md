@@ -98,4 +98,70 @@ Successfully installed pip-22.0.2
 ```
 
 
+#### 4. Creating django project 'sweetshop'
+
+```bash
+# Checking django version
+
+(django-tenant) λ pip freeze
+asgiref==3.5.0
+Django==4.0
+sqlparse==0.4.2
+tzdata==2021.5
+
+# Checking django-admin commands
+
+E:\workspace\django-2022\TENANTCY\2022-django-tenant-guide\2022-django-tenant-guide (main)
+(django-tenant) λ django-admin
+
+Type 'django-admin help <subcommand>' for help on a specific subcommand.
+
+Available subcommands:
+
+[django]
+    check
+    compilemessages
+    ...
+    startapp
+    startproject
+    test
+    testserver
+
+# Create django project 'sweetshop'
+
+E:\workspace\django-2022\TENANTCY\2022-django-tenant-guide\2022-django-tenant-guide (main)
+(django-tenant) λ django-admin startproject sweetshop
+
+# Project structures
+.
+├── LICENSE
+├── README.md
+├── sweetshop
+│   ├── manage.py
+│   └── sweetshop
+│       ├── __init__.py
+│       ├── asgi.py
+│       ├── settings.py
+│       ├── urls.py
+│       └── wsgi.py
+└── venv3940
+    ├── Include
+    ├── Lib
+    │   └── site-packages
+    ├── Scripts
+    │   ├── Activate.ps1
+    │   ├── activate
+    │   ├── activate.bat
+    │   ├── deactivate.bat
+    │   ├── django-admin.exe
+    │   ├── pip.exe
+    │   ├── pip3.9.exe
+    │   ├── pip3.exe
+    │   ├── python.exe
+    │   ├── pythonw.exe
+    │   └── sqlformat.exe
+    └── pyvenv.cfg
+```
+
+
 

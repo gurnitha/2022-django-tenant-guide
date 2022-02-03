@@ -868,3 +868,42 @@ admin.site.register(Sweet)
 ```
 
 
+#### 22. Run migrations
+
+
+```py
+
+# Create migrations
+
+E:\workspace\django-2022\TENANTCY\2022-django-tenant-guide\2022-django-tenant-guide\sweetshop (main)
+(django-tenant) λ python manage.py makemigrations
+Migrations for 'sweet_shared':
+  sweet_shared\migrations\0001_initial.py
+    - Create model SweetType
+Migrations for 'sweet_tenant':
+  sweet_tenant\migrations\0001_initial.py
+    - Create model Sweet
+
+# Apply migrations
+E:\workspace\django-2022\TENANTCY\2022-django-tenant-guide\2022-django-tenant-guide\sweetshop (main)
+(django-tenant) λ python manage.py migrate
+[standard:public] === Starting migration
+[standard:public] Operations to perform:
+[standard:public]   Apply all migrations: admin, auth, contenttypes, sessions, shop, sweet_shared, sweet_tenant
+[standard:public] Running migrations:
+[standard:public]   Applying sweet_shared.0001_initial...
+[standard:public]  OK
+[standard:public]   Applying sweet_tenant.0001_initial...
+[standard:public]  OK
+[1/1 (100%) standard:shop1] === Starting migration
+[1/1 (100%) standard:shop1] Operations to perform:
+[1/1 (100%) standard:shop1]   Apply all migrations: admin, auth, contenttypes, sessions, shop, sweet_shared, sweet_tenant
+[1/1 (100%) standard:shop1] Running migrations:
+[1/1 (100%) standard:shop1]   Applying sweet_shared.0001_initial...
+[1/1 (100%) standard:shop1]  OK
+[1/1 (100%) standard:shop1]   Applying sweet_tenant.0001_initial...
+[1/1 (100%) standard:shop1]  OK
+
+```
+
+

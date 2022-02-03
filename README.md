@@ -222,3 +222,25 @@ E:\workspace\django-2022\TENANTCY\2022-django-tenant-guide\2022-django-tenant-gu
 ```
 
 
+#### 6. Installing the shop app to the project's settings.py
+
+
+```py
+
+# Install the shop app
+
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+
+    # Locals
+    'shop.apps.ShopConfig', # new
+]
+
+```
+
+

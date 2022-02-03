@@ -452,6 +452,7 @@ class Domain(DomainMixin):
   pass 
 
 ```
+<<<<<<< HEAD
 
 
 #### 14. Fixing impor of  django_tenants, add TENANT_MODEL and TENANT_DOMAIN_MODEL to settings.py
@@ -492,5 +493,23 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+```
+
+
+#### 16. Darurat
+
+
+```py
+
+# shop/models.
+
+# Django modules
+from django.db import models
+# Fixing this bellow
+from django_tenants.models import TenantMixin, DomainMixin
+
+
+        both modified:   README.md
+        both modified:   shop/models.py
 
 ```

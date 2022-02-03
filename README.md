@@ -472,3 +472,25 @@ TENANT_MODEL = "shop.Shop"
 TENANT_DOMAIN_MODEL = "shop.Domain"
 
 ```
+
+
+#### 15. Adding middleware to settings.py
+
+
+```py
+
+MIDDLEWARE = [
+    # Must put on the top
+    'django_tenants.middleware.main.TenantMainMiddleware', # new    
+
+    'django.middleware.security.SecurityMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
+
+
+```

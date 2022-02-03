@@ -796,3 +796,75 @@ TENANT_APPS = [
 ```
 
 
+#### 21. Creating SweetType and Sweet models
+
+
+```py
+
+# 1. Create SweetType model
+
+# sweet_shared/models.py
+
+# Django modules
+from django.db import models
+
+# Create your models here.
+
+
+class SweetType(models.Model):
+    name = models.CharField(max_length=150)
+
+    def __str__(self):
+        return self.name 
+
+# 3. Register to admin
+
+# sweet_shared/admin.py
+
+# Django modules
+from django.contrib import admin
+
+# Locals
+from .models import SweetType
+
+# Register your models here.
+
+
+admin.site.register(SweetType)
+
+
+# 3. Create Sweet model
+
+# sweet_tenant/models.py
+
+# Django modules
+from django.db import models
+from sweet_shared.models import SweetType
+
+# Create your models here.
+
+
+class Sweet(models.Model):
+    sweet_type = models.ForeignKey(SweetType, on_delete=models.CASCADE)
+    name = models.CharField(max_length=150)
+
+    def __str__(self):
+        return self.name 
+
+# 3. Register to admin
+
+# sweet_tenant/admin.py
+
+# Django modules
+from django.contrib import admin
+
+# Locals
+from .models import Sweet
+
+# Register your models here.
+
+
+admin.site.register(Sweet)
+```
+
+

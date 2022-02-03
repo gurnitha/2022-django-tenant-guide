@@ -352,3 +352,33 @@ DATABASES = {
 }
 
 ```
+
+
+#### 11. Install postgres package
+
+
+```bash
+# Install postgres package
+
+(django-tenant) λ pip install psycopg2
+Collecting psycopg2
+  Using cached psycopg2-2.9.3-cp39-cp39-win_amd64.whl (1.2 MB)
+Installing collected packages: psycopg2
+Successfully installed psycopg2-2.9.3
+
+# Run the server for tesing
+
+E:\workspace\django-2022\TENANTCY\2022-django-tenant-guide\2022-django-tenant-guide\sweetshop (main)
+(django-tenant) λ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+February 03, 2022 - 11:51:34
+Django version 4.0, using settings 'sweetshop.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+````

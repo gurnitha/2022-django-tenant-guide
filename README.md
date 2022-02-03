@@ -22,6 +22,10 @@ Receiving objects: 100% (5/5), done.
 E:\workspace\django-2022\TENANTCY\2022-django-tenant-guide
 λ cd 2022-django-tenant-guide\
 E:\workspace\django-2022\TENANTCY\2022-django-tenant-guide\2022-django-tenant-guide (main)
+
+# Push changes to Github
+E:\workspace\django-2022\TENANTCY\2022-django-tenant-guide\2022-django-tenant-guide (main)
+λ git push
 ```
 
 

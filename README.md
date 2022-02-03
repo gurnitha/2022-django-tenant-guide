@@ -618,7 +618,131 @@ class Migration(migrations.Migration):
             },
         ),
     ]
-    
+
+```
+
+
+#### 19. Creating tenants
+
+
+```py
+
+# Checking management commands
+(django-tenant) λ python manage.py
+
+Type 'manage.py help <subcommand>' for help on a specific subcommand.
+
+Available subcommands:
+
+[auth]
+    changepassword
+    createsuperuser
+
+[contenttypes]
+    remove_stale_contenttypes
+
+[django]
+    check
+    compilemessages
+    createcachetable
+    dbshell
+    diffsettings
+    dumpdata
+    flush
+    inspectdb
+    loaddata
+    makemessages
+    makemigrations
+    sendtestemail
+    shell
+    showmigrations
+    sqlflush
+    sqlmigrate
+    sqlsequencereset
+    squashmigrations
+    startapp
+    startproject
+    test
+    testserver
+
+[django_tenants]
+    all_tenants_command
+    clone_tenant
+    collectstatic_schemas
+    create_missing_schemas
+    create_tenant # <--- to be used to create tenant
+    create_tenant_superuser
+    delete_tenant
+    migrate
+    migrate_schemas
+    rename_schema
+    tenant_command
+
+[sessions]
+    clearsessions
+
+[staticfiles]
+    collectstatic
+    findstatic
+    runserver
+
+# Create tenant
+
+(django-tenant) λ python manage.py create_tenant
+schema name: shop1
+name: shop1
+[1/1 (100%) standard:shop1] === Starting migration
+[1/1 (100%) standard:shop1] Operations to perform:
+[1/1 (100%) standard:shop1]   Apply all migrations: admin, auth, contenttypes, sessions, shop
+[1/1 (100%) standard:shop1] Running migrations:
+[1/1 (100%) standard:shop1]   Applying contenttypes.0001_initial...
+[1/1 (100%) standard:shop1]  OK
+[1/1 (100%) standard:shop1]   Applying auth.0001_initial...
+[1/1 (100%) standard:shop1]  OK
+[1/1 (100%) standard:shop1]   Applying admin.0001_initial...
+[1/1 (100%) standard:shop1]  OK
+[1/1 (100%) standard:shop1]   Applying admin.0002_logentry_remove_auto_add...
+[1/1 (100%) standard:shop1]  OK
+[1/1 (100%) standard:shop1]   Applying admin.0003_logentry_add_action_flag_choices...
+[1/1 (100%) standard:shop1]  OK
+[1/1 (100%) standard:shop1]   Applying contenttypes.0002_remove_content_type_name...
+[1/1 (100%) standard:shop1]  OK
+[1/1 (100%) standard:shop1]   Applying auth.0002_alter_permission_name_max_length...
+[1/1 (100%) standard:shop1]  OK
+[1/1 (100%) standard:shop1]   Applying auth.0003_alter_user_email_max_length...
+[1/1 (100%) standard:shop1]  OK
+[1/1 (100%) standard:shop1]   Applying auth.0004_alter_user_username_opts...
+[1/1 (100%) standard:shop1]  OK
+[1/1 (100%) standard:shop1]   Applying auth.0005_alter_user_last_login_null...
+[1/1 (100%) standard:shop1]  OK
+[1/1 (100%) standard:shop1]   Applying auth.0006_require_contenttypes_0002...
+[1/1 (100%) standard:shop1]  OK
+[1/1 (100%) standard:shop1]   Applying auth.0007_alter_validators_add_error_messages...
+[1/1 (100%) standard:shop1]  OK
+[1/1 (100%) standard:shop1]   Applying auth.0008_alter_user_username_max_length...
+[1/1 (100%) standard:shop1]  OK
+[1/1 (100%) standard:shop1]   Applying auth.0009_alter_user_last_name_max_length...
+[1/1 (100%) standard:shop1]  OK
+[1/1 (100%) standard:shop1]   Applying auth.0010_alter_group_name_max_length...
+[1/1 (100%) standard:shop1]  OK
+[1/1 (100%) standard:shop1]   Applying auth.0011_update_proxy_permissions...
+[1/1 (100%) standard:shop1]  OK
+[1/1 (100%) standard:shop1]   Applying auth.0012_alter_user_first_name_max_length...
+[1/1 (100%) standard:shop1]  OK
+[1/1 (100%) standard:shop1]   Applying sessions.0001_initial...
+[1/1 (100%) standard:shop1]  OK
+[1/1 (100%) standard:shop1]   Applying shop.0001_initial...
+[1/1 (100%) standard:shop1]  OK
+domain: shop1.localhost
+is primary (leave blank to use 'True'):
+E:\workspace\django-2022\TENANTCY\2022-django-tenant-guide\2022-django-tenant-guide\sweetshop (main)
+(django-tenant) λ
+
+# Note: 
+# 1. Make sure your postgres server is running
+# 2. Refresh your postgres db
+# 3. You should she a new schema named 'shop1' bellow the public schema in your postgres database
+# On my part, the new schema 'shop1' was succesfully created. :)
 ```
 
 

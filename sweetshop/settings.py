@@ -47,6 +47,9 @@ SHARED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # Locals
+    'sweet_shared',
 ]
 
 TENANT_APPS = [
@@ -56,6 +59,9 @@ TENANT_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # Locals
+    'sweet_tenant',
 ]
 
 INSTALLED_APPS = list(SHARED_APPS) + [

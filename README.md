@@ -746,3 +746,53 @@ E:\workspace\django-2022\TENANTCY\2022-django-tenant-guide\2022-django-tenant-gu
 ```
 
 
+#### 20. Creating sweet_shared app and sweet_tenant app and install them to settings.py
+
+
+```py
+
+# Create apps
+E:\workspace\django-2022\TENANTCY\2022-django-tenant-guide\2022-django-tenant-guide\sweetshop (main)
+(django-tenant) λ python manage.py startapp sweet_tenant
+
+E:\workspace\django-2022\TENANTCY\2022-django-tenant-guide\2022-django-tenant-guide\sweetshop (main)
+(django-tenant) λ python manage.py startapp sweet_shared
+
+# Install to settings
+
+SHARED_APPS = [
+    
+    # Third party apps
+
+    # django_tenants MUST be placed at 
+    # the highest position possible
+    'django_tenants',
+
+    # Locals
+    'shop.apps.ShopConfig',  
+
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+
+    # Locals
+    'sweet_shared',
+]
+
+TENANT_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+
+    # Locals
+    'sweet_tenant',
+]
+```
+
+

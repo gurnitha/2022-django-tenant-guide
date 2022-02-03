@@ -308,3 +308,27 @@ E:\workspace\django-2022\TENANTCY\2022-django-tenant-guide\2022-django-tenant-gu
 ```
 
 
+#### 9. Creating Postgres Database
+
+
+```bash
+
+# Login to the server
+E:\workspace
+λ psql -U postgres
+psql (13.0)
+WARNING: Console code page (437) differs from Windows code page (1252)
+         8-bit characters might not work correctly. See psql reference
+         page "Notes for Windows users" for details.
+Type "help" for help.
+
+# Create database
+
+postgres=# CREATE DATABASE django_tenant_guide_2022;
+CREATE DATABASE
+
+# Connecting with the database
+
+postgres=# \c django_tenant_guide_2022;
+You are now connected to database "django_tenant_guide_2022" as user "postgres".
+```

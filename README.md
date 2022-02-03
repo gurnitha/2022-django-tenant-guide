@@ -513,3 +513,42 @@ from django_tenants.models import TenantMixin, DomainMixin
         both modified:   shop/models.py
 
 ```
+
+
+#### 17. Split the INSTALLED_APPS
+
+
+```py
+SHARED_APPS = [
+    
+    # Third party apps
+
+    # django_tenants MUST be placed at 
+    # the highest position possible
+    'django_tenants',
+
+    # Locals
+    'shop.apps.ShopConfig',  
+
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+]
+
+TENANT_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+]
+
+INSTALLED_APPS = list(SHARED_APPS) + [
+    app for app in TENANT_APPS if app not in SHARED_APPS
+]
+
+```

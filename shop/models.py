@@ -2,11 +2,7 @@
 
 # Django modules
 from django.db import models
-<<<<<<< HEAD
 from django_tenants.models import TenantMixin, DomainMixin
-=======
-from django_tenants import TenantMixin, DomainMixin
->>>>>>> 66a7d5070e40b2b5c70ac063e88f0a7531d2f8a7
 
 # Create your models here.
 
